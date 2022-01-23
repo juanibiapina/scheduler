@@ -14,10 +14,6 @@ const boulderklub_session = {
   "time": "18:30 - 20:30"
 }
 
-const user = {
-  "name": "Juan"
-}
-
 class UserData extends React.Component {
   constructor(props) {
     super(props);
