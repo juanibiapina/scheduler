@@ -5,15 +5,21 @@ import './App.css';
 import UserDataForm from './UserDataForm';
 import SessionScheduler from './SessionScheduler';
 
-const basement_session = {
+const basement_saturday = {
   "gym_name": "basement",
   "human_date": "this saturday",
   "time": "10:30 - 12:30"
 }
 
-const boulderklub_session = {
+const boulderklub_tuesday = {
   "gym_name": "boulderklub",
   "human_date": "this tuesday",
+  "time": "18:30 - 20:30"
+}
+
+const basement_thursday = {
+  "gym_name": "basement",
+  "human_date": "this thursday",
   "time": "18:30 - 20:30"
 }
 
@@ -31,12 +37,17 @@ class App extends React.Component {
         <div className="App">
           <div className="container">
             <SessionScheduler
-              session={basement_session}
+              session={basement_saturday}
               user={this.state.user}
             />
 
             <SessionScheduler
-              session={boulderklub_session}
+              session={boulderklub_tuesday}
+              user={this.state.user}
+            />
+
+            <SessionScheduler
+              session={basement_thursday}
               user={this.state.user}
             />
           </div>
