@@ -3,17 +3,26 @@ import InputMask from "react-input-mask";
 import styled from "styled-components";
 
 const InputContainer = styled.div`
+  font-family: Helvetica, Arial, sans-serif;
+  color: #cccccc;
   width: 100%;
   text-align: left;
-  margin: 10px;
+  margin: 5px 0;
+
+  & * {
+    display: inline-block;
+  }
 
   & label {
+    font-size: 16px;
     margin-left: 0;
   }
 
   & input {
     height: 30px;
     width: 100%;
+    border: #999999 2px solid;
+    border-radius: 4px;
   }
 `;
 

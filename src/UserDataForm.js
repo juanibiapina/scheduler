@@ -1,7 +1,17 @@
 import React from "react";
+import styled from "styled-components";
 
 import Input from "./components/Input";
 import SideBySide from "./components/SideBySide";
+import SubmitButton from "./components/SubmitButton";
+
+const StyledForm = styled.form`
+  @media (min-width: 960px) and (max-width: 1280px) {
+    width: 500px
+  }
+
+  width: 90%;
+`;
 
 class UserDataForm extends React.Component {
   constructor(props) {
@@ -46,7 +56,8 @@ class UserDataForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <StyledForm onSubmit={this.handleSubmit}>
+        <h4>Bouldering Booking form</h4>
         <SideBySide>
           <Input
             description="Name"
@@ -57,7 +68,7 @@ class UserDataForm extends React.Component {
             onChange={this.handleInputChange}
           />
           <Input
-            description="Last Name:"
+            description="Last Name"
             placeholder="eg. Doe"
             name="last_name"
             type="text"
@@ -65,79 +76,65 @@ class UserDataForm extends React.Component {
             onChange={this.handleInputChange}
           />
         </SideBySide>
-        <label>
-          Birthday:
-          <input
-            name="birthday"
-            type="text"
-            value={this.state.user.birthday}
-            onChange={this.handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Address:
-          <input
-            name="address"
-            type="text"
-            value={this.state.user.address}
-            onChange={this.handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Postal Code:
-          <input
+        <Input
+          description="Birthday"
+          placeholder="01.01.2001 (dd.mm.yyyy)"
+          mask="99.99.9999"
+          name="birthday"
+          type="text"
+          value={this.state.user.birthday}
+          onChange={this.handleInputChange}
+        />
+        <Input
+          description="Address"
+          placeholder="eg. Some str. 33B"
+          name="address"
+          type="text"
+          value={this.state.user.address}
+          onChange={this.handleInputChange}
+        />
+        <SideBySide>
+          <Input
+            description="Postal Code"
+            placeholder="12333"
+            mask="99999"
             name="postal_code"
             type="text"
             value={this.state.user.postal_code}
             onChange={this.handleInputChange}
           />
-        </label>
-        <br />
-        <label>
-          City:
-          <input
+          <Input
+            description="City"
+            placeholder="eg. Berlin"
             name="city"
             type="text"
             value={this.state.user.city}
             onChange={this.handleInputChange}
           />
-        </label>
-        <br />
-        <label>
-          Phone Number:
-          <input
-            name="phone_number"
-            type="text"
-            value={this.state.user.phone_number}
-            onChange={this.handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          E-mail:
-          <input
-            name="email"
-            type="text"
-            value={this.state.user.email}
-            onChange={this.handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          USC Number:
-          <input
-            name="usc_number"
-            type="text"
-            value={this.state.user.usc_number}
-            onChange={this.handleInputChange}
-          />
-        </label>
-        <br />
-
-        <input type="submit" value="Submit" />
-      </form>
+        </SideBySide>
+        <Input
+          description="Phone Number"
+          placeholder="012224053535"
+          mask="999999999999"
+          name="phone_number"
+          type="text"
+          value={this.state.user.phone_number}
+          onChange={this.handleInputChange}
+        />
+        <Input
+          description="USC Membership No"
+          placeholder="111111111"
+          mask="999999999"
+          name="usc_number"
+          type="text"
+          value={this.state.user.usc_number}
+          onChange={this.handleInputChange}
+        />
+        <SubmitButton type="submit" value="Submit" />
+        <div>
+          <span>At the next step you will select the slots</span>
+        </div>
+      </StyledForm>
     );
   }
 }
