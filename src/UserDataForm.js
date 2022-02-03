@@ -66,7 +66,7 @@ class UserDataForm extends React.Component {
           Birthday:
           <input
             name="birthday"
-            type="text"
+            type="date"
             value={this.state.user.birthday}
             onChange={this.handleInputChange} />
         </label>
