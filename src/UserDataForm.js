@@ -102,7 +102,7 @@ class UserDataForm extends React.Component {
           Phone Number:
           <input
             name="phone_number"
-            type="text"
+            type="tel"
             value={this.state.user.phone_number}
             onChange={this.handleInputChange} />
         </label>
@@ -111,7 +111,7 @@ class UserDataForm extends React.Component {
           E-mail:
           <input
             name="email"
-            type="text"
+            type="email"
             value={this.state.user.email}
             onChange={this.handleInputChange} />
         </label>
