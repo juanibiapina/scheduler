@@ -1,4 +1,7 @@
-import React from 'react';
+import React from "react";
+
+import Input from "./components/Input";
+import SideBySide from "./components/SideBySide";
 
 class UserDataForm extends React.Component {
   constructor(props) {
@@ -16,8 +19,8 @@ class UserDataForm extends React.Component {
         phone_number: "",
         email: "",
         type: "Urban Sports Club",
-        usc_number: ""
-      }
+        usc_number: "",
+      },
     };
   }
 
@@ -44,91 +47,98 @@ class UserDataForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input
+        <SideBySide>
+          <Input
+            description="Name"
+            placeholder="eg. John"
             name="name"
             type="text"
             value={this.state.user.name}
-            onChange={this.handleInputChange} />
-        </label>
-        <br/>
-        <label>
-          Last Name:
-          <input
+            onChange={this.handleInputChange}
+          />
+          <Input
+            description="Last Name:"
+            placeholder="eg. Doe"
             name="last_name"
             type="text"
             value={this.state.user.last_name}
-            onChange={this.handleInputChange} />
-        </label>
-        <br/>
+            onChange={this.handleInputChange}
+          />
+        </SideBySide>
         <label>
           Birthday:
           <input
             name="birthday"
             type="text"
             value={this.state.user.birthday}
-            onChange={this.handleInputChange} />
+            onChange={this.handleInputChange}
+          />
         </label>
-        <br/>
+        <br />
         <label>
           Address:
           <input
             name="address"
             type="text"
             value={this.state.user.address}
-            onChange={this.handleInputChange} />
+            onChange={this.handleInputChange}
+          />
         </label>
-        <br/>
+        <br />
         <label>
           Postal Code:
           <input
             name="postal_code"
             type="text"
             value={this.state.user.postal_code}
-            onChange={this.handleInputChange} />
+            onChange={this.handleInputChange}
+          />
         </label>
-        <br/>
+        <br />
         <label>
           City:
           <input
             name="city"
             type="text"
             value={this.state.user.city}
-            onChange={this.handleInputChange} />
+            onChange={this.handleInputChange}
+          />
         </label>
-        <br/>
+        <br />
         <label>
           Phone Number:
           <input
             name="phone_number"
             type="text"
             value={this.state.user.phone_number}
-            onChange={this.handleInputChange} />
+            onChange={this.handleInputChange}
+          />
         </label>
-        <br/>
+        <br />
         <label>
           E-mail:
           <input
             name="email"
             type="text"
             value={this.state.user.email}
-            onChange={this.handleInputChange} />
+            onChange={this.handleInputChange}
+          />
         </label>
-        <br/>
+        <br />
         <label>
           USC Number:
           <input
             name="usc_number"
             type="text"
             value={this.state.user.usc_number}
-            onChange={this.handleInputChange} />
+            onChange={this.handleInputChange}
+          />
         </label>
-        <br/>
+        <br />
 
         <input type="submit" value="Submit" />
       </form>
-    )
+    );
   }
 }
 
