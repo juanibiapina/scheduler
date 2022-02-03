@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './App.css';
+import SubmitButton from './components/SubmitButton';
 
 import UserDataForm from './UserDataForm';
 import SessionScheduler from './SessionScheduler';
@@ -35,12 +36,13 @@ class App extends React.Component {
     if (this.state.user) {
       return (
         <div className="App">
-          <div>
-        <button onClick={() => {
-          debugger;
-        }}>Edit booking data</button>
-          </div>
           <div className="container">
+            <div>
+              <SubmitButton onClick={() => {
+                this.setState({ user: null })
+              }}>Modify your data</SubmitButton>
+            </div>
+
             <SessionScheduler
               session={basement_saturday}
               user={this.state.user}

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export default styled.input`
+export default styled.button`
   font-size: 16px;
   width: 80%;
   height: 40px;

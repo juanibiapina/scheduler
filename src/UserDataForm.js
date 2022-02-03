@@ -7,7 +7,7 @@ import SubmitButton from "./components/SubmitButton";
 
 const StyledForm = styled.form`
   @media (min-width: 960px) {
-    width: 500px
+    width: 500px;
   }
 
   width: 90%;
@@ -15,7 +15,7 @@ const StyledForm = styled.form`
 
 const Disclaimer = styled.small`
   font-size: 14px;
-`
+`;
 
 class UserDataForm extends React.Component {
   constructor(props) {
@@ -62,7 +62,9 @@ class UserDataForm extends React.Component {
     return (
       <StyledForm onSubmit={this.handleSubmit}>
         <h4>Personal data for bookings</h4>
-        <Disclaimer>*It will save the data on your browser for regular bookings.</Disclaimer>
+        <Disclaimer>
+          *It will save the data on your browser for regular bookings.
+        </Disclaimer>
         <SideBySide>
           <Input
             description="Name"
@@ -133,7 +135,8 @@ class UserDataForm extends React.Component {
           name="email"
           type="email"
           value={this.state.user.email}
-          onChange={this.handleInputChange} />
+          onChange={this.handleInputChange}
+        />
         <Input
           description="USC Membership No"
           placeholder="111111111"
@@ -143,7 +146,7 @@ class UserDataForm extends React.Component {
           value={this.state.user.usc_number}
           onChange={this.handleInputChange}
         />
-        <SubmitButton type="submit" value="Save personal data" />
+        <SubmitButton type="submit">Save personal data</SubmitButton>
         <div>
           <span>At the next step you will select the slots</span>
         </div>
