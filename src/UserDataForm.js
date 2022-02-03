@@ -63,7 +63,7 @@ class UserDataForm extends React.Component {
             description="Name"
             placeholder="eg. John"
             name="name"
-            autocomplete="given-name"
+            autoComplete="given-name"
             type="text"
             value={this.state.user.name}
             onChange={this.handleInputChange}
@@ -72,7 +72,7 @@ class UserDataForm extends React.Component {
             description="Last Name"
             placeholder="eg. Doe"
             name="last_name"
-            autocomplete="family-name"
+            autoComplete="family-name"
             type="text"
             value={this.state.user.last_name}
             onChange={this.handleInputChange}
@@ -80,11 +80,10 @@ class UserDataForm extends React.Component {
         </SideBySide>
         <Input
           description="Birthday"
-          placeholder="01.01.2001 (dd.mm.yyyy)"
-          mask="99.99.9999"
+          placeholder="2001-12-30.(yyyy-mm-dd)"
           name="birthday"
-          autocomplete="bday"
-          type="text"
+          autoComplete="bday"
+          type="date"
           value={this.state.user.birthday}
           onChange={this.handleInputChange}
         />

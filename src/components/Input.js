@@ -33,12 +33,12 @@ function Input({
   type,
   mask,
   value,
-  autocomplete,
+  autoComplete,
   onChange,
 }) {
   return (
     <InputContainer>
-      <label for={name}>{description}</label>
+      <label htmlFor={name}>{description}</label>
       <InputMask
         placeholder={placeholder}
         id={name}
@@ -46,7 +46,7 @@ function Input({
         name={name}
         type={type}
         value={value}
-        autocomplete={autocomplete}
+        autoComplete={autoComplete}
         onChange={onChange}
       />
     </InputContainer>
