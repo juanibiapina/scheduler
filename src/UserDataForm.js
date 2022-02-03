@@ -13,6 +13,10 @@ const StyledForm = styled.form`
   width: 90%;
 `;
 
+const Disclaimer = styled.small`
+  font-size: 14px;
+`
+
 class UserDataForm extends React.Component {
   constructor(props) {
     super(props);
@@ -57,7 +61,8 @@ class UserDataForm extends React.Component {
   render() {
     return (
       <StyledForm onSubmit={this.handleSubmit}>
-        <h4>Bouldering Booking form</h4>
+        <h4>Personal data for bookings</h4>
+        <Disclaimer>*It will save the data on your browser for regular bookings.</Disclaimer>
         <SideBySide>
           <Input
             description="Name"
@@ -138,7 +143,7 @@ class UserDataForm extends React.Component {
           value={this.state.user.usc_number}
           onChange={this.handleInputChange}
         />
-        <SubmitButton type="submit" value="Submit" />
+        <SubmitButton type="submit" value="Save personal data" />
         <div>
           <span>At the next step you will select the slots</span>
         </div>
