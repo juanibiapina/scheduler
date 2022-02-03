@@ -33,6 +33,7 @@ function Input({
   type,
   mask,
   value,
+  autocomplete,
   onChange,
 }) {
   return (
@@ -45,6 +46,7 @@ function Input({
         name={name}
         type={type}
         value={value}
+        autocomplete={autocomplete}
         onChange={onChange}
       />
     </InputContainer>

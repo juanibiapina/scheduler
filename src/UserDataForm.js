@@ -6,7 +6,7 @@ import SideBySide from "./components/SideBySide";
 import SubmitButton from "./components/SubmitButton";
 
 const StyledForm = styled.form`
-  @media (min-width: 960px) and (max-width: 1280px) {
+  @media (min-width: 960px) {
     width: 500px
   }
 
@@ -63,6 +63,7 @@ class UserDataForm extends React.Component {
             description="Name"
             placeholder="eg. John"
             name="name"
+            autocomplete="given-name"
             type="text"
             value={this.state.user.name}
             onChange={this.handleInputChange}
@@ -71,6 +72,7 @@ class UserDataForm extends React.Component {
             description="Last Name"
             placeholder="eg. Doe"
             name="last_name"
+            autocomplete="family-name"
             type="text"
             value={this.state.user.last_name}
             onChange={this.handleInputChange}
@@ -81,6 +83,7 @@ class UserDataForm extends React.Component {
           placeholder="01.01.2001 (dd.mm.yyyy)"
           mask="99.99.9999"
           name="birthday"
+          autocomplete="bday"
           type="text"
           value={this.state.user.birthday}
           onChange={this.handleInputChange}
@@ -115,12 +118,18 @@ class UserDataForm extends React.Component {
         <Input
           description="Phone Number"
           placeholder="012224053535"
-          mask="999999999999"
           name="phone_number"
-          type="text"
+          type="tel"
           value={this.state.user.phone_number}
           onChange={this.handleInputChange}
         />
+        <Input
+          description="Email"
+          placeholder="foo@email.com"
+          name="email"
+          type="email"
+          value={this.state.user.email}
+          onChange={this.handleInputChange} />
         <Input
           description="USC Membership No"
           placeholder="111111111"

@@ -35,6 +35,11 @@ class App extends React.Component {
     if (this.state.user) {
       return (
         <div className="App">
+          <div>
+        <button onClick={() => {
+          debugger;
+        }}>Edit booking data</button>
+          </div>
           <div className="container">
             <SessionScheduler
               session={basement_saturday}
