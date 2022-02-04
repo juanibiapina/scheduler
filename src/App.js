@@ -40,7 +40,7 @@ class App extends React.Component {
             <div>
               <SubmitButton onClick={() => {
                 this.setState({ user: null })
-              }}>Modify your data</SubmitButton>
+              }}>Reset saved data</SubmitButton>
             </div>
 
             <SessionScheduler
