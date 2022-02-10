@@ -56,8 +56,7 @@ class SessionScheduler extends React.Component {
             if (data) {
               return (
                 <div>
-                  <div>Post ID: {data.id}</div>
-                  <div>Post Title: {data.title}</div>
+                  <div>Success. Check your e-mail for confirmation.</div>
                 </div>
               );
             }
