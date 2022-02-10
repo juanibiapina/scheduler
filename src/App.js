@@ -18,6 +18,12 @@ const boulderklub_tuesday = {
   "time": "18:30 - 20:30"
 }
 
+const boulderklub_thursday = {
+  "gym_name": "boulderklub",
+  "human_date": "this thursday",
+  "time": "19:00 - 21:00"
+}
+
 const basement_thursday = {
   "gym_name": "basement",
   "human_date": "this thursday",
@@ -50,6 +56,11 @@ class App extends React.Component {
 
             <SessionScheduler
               session={boulderklub_tuesday}
+              user={this.state.user}
+            />
+
+            <SessionScheduler
+              session={boulderklub_thursday}
               user={this.state.user}
             />
 
