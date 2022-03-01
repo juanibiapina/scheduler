@@ -15,7 +15,7 @@ const basement_saturday = {
 const boulderklub_tuesday = {
   "gym_name": "boulderklub",
   "human_date": "this tuesday",
-  "time": "19:30 - 21:30"
+  "time": "19:00 - 21:00"
 }
 
 const boulderklub_thursday = {
